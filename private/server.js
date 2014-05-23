@@ -9,7 +9,8 @@ var configPath = path.join(__dirname,'../config');
 
 var config = {
 	github: optRequire(path.join(configPath,'github.json')),
-	stackExchange: optRequire(path.join(configPath,'stack-exchange.json'))
+	stackexchange: optRequire(path.join(configPath,'stackexchange.json')),
+	codewars: optRequire(path.join(configPath,'codewars.json'))
 };
 
 if(config.github) {
@@ -44,6 +45,10 @@ if(config.github) {
 	});
 }
 
-if(config.stackExchange) {
+if(config.stackexchange) {
 	console.log('stack exchange configured');
+}
+
+if(config.codewars) {
+	console.log('code wars configured');
 }
